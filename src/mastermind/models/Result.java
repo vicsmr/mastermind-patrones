@@ -9,14 +9,14 @@ public class Result {
 	public Result() {
 	}
 
-	public Result(int blacks, int whites) {
+	protected Result(int blacks, int whites) {
 		assert blacks >= 0;
 		assert whites >= 0;
 		this.blacks = blacks;
 		this.whites = whites;
 	}
 
-	public boolean isWinner() {
+	protected boolean isWinner() {
 		return this.blacks == Combination.getWidth();
 	}
 
@@ -36,7 +36,7 @@ public class Result {
 		this.whites = whites;
 	}
 	
-	public Result copy() {
+	protected Result copy() {
 		return new Result(this.blacks, this.whites);
 	}
 

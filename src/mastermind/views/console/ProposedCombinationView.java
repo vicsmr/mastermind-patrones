@@ -17,7 +17,7 @@ public class ProposedCombinationView extends WithConsoleView {
 		this.gameController = gameController;
 	}
 	
-	void write(int i) {
+	protected void write(int i) {
 		for (Color color : this.gameController.getColors(i)) {
 			new ColorView(color).write();
 		}

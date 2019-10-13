@@ -7,7 +7,7 @@ import mastermind.types.Color;
 
 public class SecretCombination extends Combination {
 
-	public SecretCombination() {
+	protected SecretCombination() {
 		for(Color color: Color.values()) {
 			this.colors.add(color);
 		}
@@ -18,7 +18,7 @@ public class SecretCombination extends Combination {
 		Collections.shuffle(this.colors);
 	}
 
-	public Result getResult(ProposedCombination proposedCombination) {
+	protected Result getResult(ProposedCombination proposedCombination) {
 		int blacks = 0;
 		for (int i = 0; i < this.colors.size(); i++) {
 			if (proposedCombination.contains(this.colors.get(i), i)) {

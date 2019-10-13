@@ -10,12 +10,12 @@ public class NewGameCommand extends Command {
 	}
 
 	@Override
-	public void execute() {
+	protected void execute() {
 		((StartController) this.acceptorController).start();
 	}
 
 	@Override
-	public boolean isActive() {
+	protected boolean isActive() {
 		return true;
 	}
 }

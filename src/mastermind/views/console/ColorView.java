@@ -5,15 +5,15 @@ import santaTecla.utils.WithConsoleView;
 
 class ColorView extends WithConsoleView {
 
-	static final char[] INITIALS = { 'r', 'b', 'y', 'g', 'o', 'p' };
+	protected static final char[] INITIALS = { 'r', 'b', 'y', 'g', 'o', 'p' };
 
-	protected Color color;
+	private Color color;
 
-	ColorView(Color color) {
+	protected ColorView(Color color) {
 		this.color = color;
 	}
 
-	static String allInitials() {
+	protected static String allInitials() {
 		String result = "";
 		for (char character : ColorView.INITIALS) {
 			result += character;
@@ -21,11 +21,11 @@ class ColorView extends WithConsoleView {
 		return result;
 	}
 
-	char getInitial() {
+	protected char getInitial() {
 		return ColorView.INITIALS[this.color.ordinal()];
 	}
 
-	static Color getInstance(char character) {
+	protected static Color getInstance(char character) {
 		for (int i = 0; i < ColorView.INITIALS.length; i++) {
 			if (ColorView.INITIALS[i] == character) {
 				return Color.values()[i];
@@ -34,7 +34,7 @@ class ColorView extends WithConsoleView {
 		return null;
 	}
 
-	void write() {
+	protected void write() {
 		this.console.write(ColorView.INITIALS[this.color.ordinal()]);
 	}
 

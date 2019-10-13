@@ -8,7 +8,7 @@ public class LogicProxy extends Logic {
 	
 	private TCPIP tcpip;
 
-    public LogicProxy() {
+	protected LogicProxy() {
         this.tcpip = TCPIP.createClientSocket();
         this.session = new SessionProxy(this.tcpip);
         this.acceptorControllers.put(StateValue.INITIAL, new StartControllerProxy(this.session, this.tcpip));
@@ -18,7 +18,7 @@ public class LogicProxy extends Logic {
         this.acceptorControllers.put(StateValue.EXIT, null);
     }
 
-    public void close() {
+	protected void close() {
         this.tcpip.close();
     }
 

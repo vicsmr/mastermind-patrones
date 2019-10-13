@@ -7,7 +7,7 @@ import santaTecla.utils.YesNoDialog;
 
 public class SaveView extends WithConsoleView {
 
-	void interact(SaveController saveController) {
+	protected void interact(SaveController saveController) {
 		boolean save = new YesNoDialog().read(MessageView.SAVE.getMessage());
 		String name = null;
 		if (save) {

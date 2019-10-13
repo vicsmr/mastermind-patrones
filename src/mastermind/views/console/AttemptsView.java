@@ -8,11 +8,11 @@ public class AttemptsView extends WithConsoleView {
 
 	private GameController gameController;
 
-	AttemptsView(GameController gameController) {
+	protected AttemptsView(GameController gameController) {
 		this.gameController = gameController;
 	}
 
-	void writeln() {
+	protected void writeln() {
 		MessageView.ATTEMPTS.writeln(this.gameController.getAttempts());
 	}
 

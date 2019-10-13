@@ -5,7 +5,7 @@ import mastermind.views.console.menu.PlayMenu;
 
 public class PlayView {
 	
-	void interact(PlayController playController) {
+	protected void interact(PlayController playController) {
 		new PlayMenu(playController).execute();	
 	}
 

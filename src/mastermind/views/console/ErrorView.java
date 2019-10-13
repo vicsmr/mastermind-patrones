@@ -5,18 +5,18 @@ import santaTecla.utils.WithConsoleView;
 
 class ErrorView extends WithConsoleView {
 
-	static final String[] MESSAGES = { 
+	protected static final String[] MESSAGES = { 
 			"Repeated colors",
 			"Wrong colors, they must be: " + ColorView.allInitials(), 
 			"Wrong proposed combination length" };
 
-	Error error;
+	private Error error;
 
-	ErrorView(Error error) {
+	protected ErrorView(Error error) {
 		this.error = error;
 	}
 	
-	void writeln() {
+	protected void writeln() {
 		this.console.writeln(ErrorView.MESSAGES[this.error.ordinal()]);
 	}
 

@@ -8,12 +8,12 @@ class SecretCombinationView extends WithConsoleView {
 	
 	private Controller controller;
 	
-	public SecretCombinationView(Controller controller) {
+	protected SecretCombinationView(Controller controller) {
 		super();
 		this.controller = controller;
 	}
 	
-	public void writeln() {
+	protected void writeln() {
 		for (int i = 0; i < this.controller.getWidth(); i++) {
 			this.console.write(MessageView.SECRET.getMessage());
 		}

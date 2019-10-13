@@ -9,13 +9,13 @@ public class GameSelectCommand extends Command {
 	}
 
 	@Override
-	public void execute() {
+	protected void execute() {
 		this.console.writeln(this.title);
 		((StartController) this.acceptorController).start(this.title);
 	}
 
 	@Override
-	public boolean isActive() {
+	protected boolean isActive() {
 		return true;
 	}
 

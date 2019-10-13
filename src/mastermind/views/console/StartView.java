@@ -7,7 +7,7 @@ import santaTecla.utils.WithConsoleView;
 
 class StartView extends WithConsoleView {
 	
-	public void interact(StartController startController) {
+	protected void interact(StartController startController) {
 		MessageView.TITLE.writeln();
 		new StartMenu(startController).execute();
 		new GameView(startController).writeln();

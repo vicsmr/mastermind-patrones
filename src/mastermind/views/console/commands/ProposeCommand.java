@@ -17,7 +17,7 @@ public class ProposeCommand extends Command {
 	}
 
 	@Override
-	public void execute() {
+	protected void execute() {
 		Error error;
 		do {
 			List<Color> colors = new ProposedCombinationView((PlayController) this.acceptorController).read();
@@ -26,11 +26,11 @@ public class ProposeCommand extends Command {
 				new ErrorView(error).writeln();
 			}
 		} while (error != null);
-		new GameView((PlayController) this.acceptorController);
+		new GameView((PlayController) this.acceptorController).writeln();
 	}
 
 	@Override
-	public boolean isActive() {
+	protected boolean isActive() {
 		return true;
 	}
 

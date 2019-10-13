@@ -9,7 +9,7 @@ public class ResumeControllerProxy extends ResumeController {
 	
 	private TCPIP tcpip;
 
-	public ResumeControllerProxy(Session session, TCPIP tcpip) {
+	protected ResumeControllerProxy(Session session, TCPIP tcpip) {
 		super(session);
 		this.tcpip = tcpip;
 	}

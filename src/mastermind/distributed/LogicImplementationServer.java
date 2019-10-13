@@ -30,7 +30,7 @@ import mastermind.controllers.implementation.LogicImplementation;
 
 public class LogicImplementationServer extends LogicImplementation {
 
-	public void createDispatchers(DispatcherPrototype dispatcherPrototype) {
+	protected void createDispatchers(DispatcherPrototype dispatcherPrototype) {
 		dispatcherPrototype.add(FrameType.START, new StartDispatcher(this.startControllerImplementation));
         dispatcherPrototype.add(FrameType.NEW_GAME, new ResumeDispatcher(this.resumeControllerImplementation));
         dispatcherPrototype.add(FrameType.START_NAME, new StartNameDispatcher(this.startControllerImplementation));

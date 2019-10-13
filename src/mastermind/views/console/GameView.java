@@ -5,7 +5,7 @@ import mastermind.views.MessageView;
 
 public class GameView {
 
-	GameController gameController;
+	private GameController gameController;
 
 	public GameView(GameController gameController) {
 		this.gameController = gameController;
