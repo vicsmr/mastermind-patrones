@@ -9,6 +9,9 @@ public class StartMenu extends Menu {
 
 	public StartMenu(StartController startController) {
 		this.addCommand(new NewGameCommand(startController));
-		this.addCommand(new OpenGameCommand(startController));
+		String[] gamesNames = startController.getGamesNames();
+		if (gamesNames.length > 0) {
+			this.addCommand(new OpenGameCommand(startController));
+		}
 	}
 }
