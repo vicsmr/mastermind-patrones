@@ -62,7 +62,7 @@ public class StartControllerImplementation extends StartController {
 
 	@Override
 	public boolean isLoser() {
-		return ((SessionImplementation) this.session).isLooser();
+		return ((SessionImplementation) this.session).isLoser();
 	}
 
 }

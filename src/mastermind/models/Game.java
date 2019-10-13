@@ -43,7 +43,7 @@ public class Game {
 		this.proposedCombinations.add(proposedCombination);
 	}
 
-	public boolean isLooser() {
+	public boolean isLoser() {
 		return this.attempts == Game.MAX_LONG;
 	}
 	

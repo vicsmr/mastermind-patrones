@@ -47,7 +47,7 @@ public class SessionImplementationDAO {
 			e.printStackTrace();
 		}
 		this.sessionImplementation.setStateValue(StateValue.IN_GAME);
-		if (this.sessionImplementation.isLooser() || this.sessionImplementation.isWinner()) {
+		if (this.sessionImplementation.isLoser() || this.sessionImplementation.isWinner()) {
 			this.sessionImplementation.setStateValue(StateValue.FINAL);
 		}
 	}

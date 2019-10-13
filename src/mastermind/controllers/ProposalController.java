@@ -34,7 +34,7 @@ public class ProposalController extends Controller {
 		SessionImplementation sessionImplementation = (SessionImplementation) this.session;
 		if (error == null){
 			sessionImplementation.addProposedCombination(colors);
-			if (sessionImplementation.isWinner() || sessionImplementation.isLooser()) {
+			if (sessionImplementation.isWinner() || sessionImplementation.isLoser()) {
 				sessionImplementation.next();
 			}
 		}
@@ -46,7 +46,7 @@ public class ProposalController extends Controller {
 	}
 
 	public boolean isLooser() {
-		return ((SessionImplementation) this.session).isLooser();
+		return ((SessionImplementation) this.session).isLoser();
 	}
 	
 	public int getAttempts() {
