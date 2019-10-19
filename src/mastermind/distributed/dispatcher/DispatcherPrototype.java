@@ -27,8 +27,7 @@ public class DispatcherPrototype {
 	public void serve() {
 		FrameType frameType = null;
 		do {
-			String string = this.tcpip.receiveLine();
-			frameType = FrameType.parser(string);
+			frameType = FrameType.parser(this.tcpip.receiveLine());
 			if (frameType != FrameType.CLOSE) {
 				this.dispatch(frameType);
 			}

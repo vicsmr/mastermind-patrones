@@ -8,8 +8,8 @@ public class GameSelectMenu extends Menu {
 
 	public GameSelectMenu(StartController startController) {
 		String[] gamesNames = startController.getGamesNames();
-		for (String title : gamesNames) {
-			this.addCommand(new GameSelectCommand(title, startController));
+		for (String gameName : gamesNames) {
+			this.addCommand(new GameSelectCommand(gameName, startController));
 		}
 	}
 

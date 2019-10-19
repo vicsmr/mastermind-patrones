@@ -75,8 +75,8 @@ public class SessionImplementationDAO {
 	}
 
 	public boolean exists(String name) {
-		for (String auxName : this.getGamesNames()) {
-			if (auxName.equals(name + SessionImplementationDAO.EXTENSION)) {
+		for (String gamesName : this.getGamesNames()) {
+			if (gamesName.equals(name + SessionImplementationDAO.EXTENSION)) {
 				return true;
 			}
 		}
