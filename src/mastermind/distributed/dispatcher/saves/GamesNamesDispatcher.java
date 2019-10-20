@@ -1,6 +1,7 @@
-package mastermind.distributed.dispatcher;
+package mastermind.distributed.dispatcher.saves;
 
 import mastermind.controllers.implementation.StartControllerImplementation;
+import mastermind.distributed.dispatcher.Dispatcher;
 
 public class GamesNamesDispatcher extends Dispatcher {
 

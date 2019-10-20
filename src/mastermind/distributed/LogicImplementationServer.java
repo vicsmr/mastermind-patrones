@@ -1,31 +1,31 @@
 package mastermind.distributed;
 
-import mastermind.distributed.dispatcher.GetAttemptsDispatcher;
-import mastermind.distributed.dispatcher.GetBlacksDispatcher;
-import mastermind.distributed.dispatcher.ColorsDispatcher;
 import mastermind.distributed.dispatcher.DispatcherPrototype;
-import mastermind.distributed.dispatcher.ExistsDispatcher;
 import mastermind.distributed.dispatcher.FrameType;
 import mastermind.distributed.dispatcher.GetTitleDispatcher;
-import mastermind.distributed.dispatcher.HasNameDispatcher;
-import mastermind.distributed.dispatcher.IsLoserDispatcher;
 import mastermind.distributed.dispatcher.NextDispatcher;
-import mastermind.distributed.dispatcher.ProposedCombinationDispatcher;
-import mastermind.distributed.dispatcher.RedoDispatcher;
-import mastermind.distributed.dispatcher.RedoableDispatcher;
 import mastermind.distributed.dispatcher.ResumeDispatcher;
-import mastermind.distributed.dispatcher.SaveDispatcher;
-import mastermind.distributed.dispatcher.SaveNamedDispatcher;
 import mastermind.distributed.dispatcher.SetTitleDispatcher;
 import mastermind.distributed.dispatcher.StartDispatcher;
 import mastermind.distributed.dispatcher.StartNameDispatcher;
 import mastermind.distributed.dispatcher.StateDispatcher;
-import mastermind.distributed.dispatcher.GamesNamesDispatcher;
-import mastermind.distributed.dispatcher.UndoDispatcher;
-import mastermind.distributed.dispatcher.UndoableDispatcher;
-import mastermind.distributed.dispatcher.GetWhitesDispatcher;
 import mastermind.distributed.dispatcher.WidthDispatcher;
-import mastermind.distributed.dispatcher.IsWinnerDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.ColorsDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.GetAttemptsDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.GetBlacksDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.GetWhitesDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.IsLoserDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.IsWinnerDispatcher;
+import mastermind.distributed.dispatcher.gameinfo.ProposedCombinationDispatcher;
+import mastermind.distributed.dispatcher.saves.ExistsDispatcher;
+import mastermind.distributed.dispatcher.saves.GamesNamesDispatcher;
+import mastermind.distributed.dispatcher.saves.HasNameDispatcher;
+import mastermind.distributed.dispatcher.saves.SaveDispatcher;
+import mastermind.distributed.dispatcher.saves.SaveNamedDispatcher;
+import mastermind.distributed.dispatcher.undoredo.RedoDispatcher;
+import mastermind.distributed.dispatcher.undoredo.RedoableDispatcher;
+import mastermind.distributed.dispatcher.undoredo.UndoDispatcher;
+import mastermind.distributed.dispatcher.undoredo.UndoableDispatcher;
 import mastermind.controllers.implementation.LogicImplementation;
 
 public class LogicImplementationServer extends LogicImplementation {

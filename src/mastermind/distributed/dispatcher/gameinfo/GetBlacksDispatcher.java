@@ -1,6 +1,7 @@
-package mastermind.distributed.dispatcher;
+package mastermind.distributed.dispatcher.gameinfo;
 
 import mastermind.controllers.implementation.PlayControllerImplementation;
+import mastermind.distributed.dispatcher.Dispatcher;
 
 public class GetBlacksDispatcher extends Dispatcher {
 

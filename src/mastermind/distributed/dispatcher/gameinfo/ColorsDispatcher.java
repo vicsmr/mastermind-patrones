@@ -1,8 +1,9 @@
-package mastermind.distributed.dispatcher;
+package mastermind.distributed.dispatcher.gameinfo;
 
 import java.util.List;
 
 import mastermind.controllers.implementation.PlayControllerImplementation;
+import mastermind.distributed.dispatcher.Dispatcher;
 import mastermind.types.Color;
 
 public class ColorsDispatcher extends Dispatcher {
