@@ -2,9 +2,9 @@ package mastermind.distributed.dispatcher;
 
 import mastermind.controllers.implementation.StartControllerImplementation;
 
-public class TitlesDispatcher extends Dispatcher {
+public class GamesNamesDispatcher extends Dispatcher {
 
-	public TitlesDispatcher(StartControllerImplementation startControllerImplementation) {
+	public GamesNamesDispatcher(StartControllerImplementation startControllerImplementation) {
 		super(startControllerImplementation);
 	}
 

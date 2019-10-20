@@ -2,9 +2,9 @@ package mastermind.distributed.dispatcher;
 
 import mastermind.controllers.implementation.PlayControllerImplementation;
 
-public class AttemptsDispatcher extends Dispatcher {
+public class GetAttemptsDispatcher extends Dispatcher {
 
-	public AttemptsDispatcher(PlayControllerImplementation playControllerImplementation) {
+	public GetAttemptsDispatcher(PlayControllerImplementation playControllerImplementation) {
 		super(playControllerImplementation);
 	}
 

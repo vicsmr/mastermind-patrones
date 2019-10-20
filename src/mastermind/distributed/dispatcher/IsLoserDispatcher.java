@@ -2,9 +2,9 @@ package mastermind.distributed.dispatcher;
 
 import mastermind.controllers.implementation.PlayControllerImplementation;
 
-public class LoserDispatcher extends Dispatcher {
+public class IsLoserDispatcher extends Dispatcher {
 
-	public LoserDispatcher(PlayControllerImplementation playControllerImplementation) {
+	public IsLoserDispatcher(PlayControllerImplementation playControllerImplementation) {
 		super(playControllerImplementation);
 	}
 
