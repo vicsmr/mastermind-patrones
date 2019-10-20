@@ -20,13 +20,13 @@ public abstract class Mastermind {
 	protected abstract Logic createLogic();
 
 	protected void play() {
-		AcceptorController controller;
+		AcceptorController acceptorController;
 		do {
-			controller = this.logic.getController();
-			if (controller != null){
-				this.view.interact(controller);
+			acceptorController = this.logic.getController();
+			if (acceptorController != null){
+				this.view.interact(acceptorController);
 			}
-		} while (controller != null); 
+		} while (acceptorController != null); 
 	}
 	
 }
