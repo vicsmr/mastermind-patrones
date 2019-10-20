@@ -35,9 +35,9 @@ public class SessionImplementationDAO {
 		this.gameDAO = new GameDAO(this.sessionImplementation.getGame());
 	}
 
-	public void load(String name) {
-		this.sessionImplementation.setName(name);
-		File file = new File(SessionImplementationDAO.directory, name);
+	public void load(String fileName) {
+		this.sessionImplementation.setName(fileName);
+		File file = new File(SessionImplementationDAO.directory, fileName);
 		try {
 			BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
 			this.gameDAO.load(bufferedReader);
@@ -56,11 +56,11 @@ public class SessionImplementationDAO {
 		this.save(this.sessionImplementation.getName());
 	}
 
-	public void save(String name) {
-		if (name.endsWith(SessionImplementationDAO.EXTENSION)) {
-			name = name.replace(SessionImplementationDAO.EXTENSION, "");
+	public void save(String fileName) {
+		if (fileName.endsWith(SessionImplementationDAO.EXTENSION)) {
+			fileName = fileName.replace(SessionImplementationDAO.EXTENSION, "");
 		}
-		File file = new File(SessionImplementationDAO.directory, name + SessionImplementationDAO.EXTENSION);
+		File file = new File(SessionImplementationDAO.directory, fileName + SessionImplementationDAO.EXTENSION);
 		try {
 			FileWriter fileWriter = new FileWriter(file);
 			this.gameDAO.save(fileWriter);
@@ -74,9 +74,9 @@ public class SessionImplementationDAO {
 		return SessionImplementationDAO.directory.list();
 	}
 
-	public boolean exists(String name) {
+	public boolean exists(String fileName) {
 		for (String gamesName : this.getGamesNames()) {
-			if (gamesName.equals(name + SessionImplementationDAO.EXTENSION)) {
+			if (gamesName.equals(fileName + SessionImplementationDAO.EXTENSION)) {
 				return true;
 			}
 		}
